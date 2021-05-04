@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/navigation_home"
+        android:icon="@drawable/ic_home_black_24dp"
+        android:iconTint="#000"
+        android:title="@string/title_home" />
+
+    <item
+        android:id="@+id/navigation_doc"
+        android:icon="@drawable/ic_baseline_attach_file_24"
+        android:iconTint="#000"
+        android:title="Document" />
+
+    <item
+        android:id="@+id/navigation_scan"
+        android:icon="@drawable/ic_camera"
+        android:iconTint="#000"
+        android:title="Scan" />
+
+    <item
+        android:id="@+id/navigation_swa"
+        android:icon="@drawable/ic_dashboard_black_24dp"
+        android:title="SWA" />
+
+    <item
+        android:id="@+id/navigation_profile"
+        android:icon="@drawable/ic_account"
+        android:iconTint="#000"
+        android:title="Profile" />
+
+</menu>

@@ -1,0 +1,2 @@
+rootProject.name='PLN SIDAK'
+include ':app'

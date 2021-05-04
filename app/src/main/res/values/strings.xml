@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">PLN SIDAK</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+
+
+    <string name="server_client_id">874351855086-hadefir8pi95cjkank7vh7sesd7f4ipi.apps.googleusercontent.com</string>
+    <string name="map_box_access_token">pk.eyJ1IjoidGFrYXNoaXRhbmFrYSIsImEiOiJja2FxeThvdHcwZzA4MnFxbGsyYjJ3d2NyIn0.zRCMI_u5Yhg7LjMviL-8TQ</string>
+    <string name="star">&#xf005;</string>
+</resources>

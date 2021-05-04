@@ -1,0 +1,65 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.MaterialComponents.Light">
+        <!-- Customize your theme here. -->
+        <item name="android:windowTranslucentStatus">true</item>
+        <item name="android:windowTranslucentNavigation">true</item>
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:statusBarColor">@color/colorPrimary</item>
+    </style>
+
+    <style name="spinner_style">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@drawable/gradient_spinner</item>
+        <item name="android:layout_margin">10dp</item>
+        <item name="android:paddingLeft">8dp</item>
+        <item name="android:paddingRight">20dp</item>
+        <item name="android:paddingTop">5dp</item>
+        <item name="android:paddingBottom">5dp</item>
+        <item name="android:popupBackground">#DFFFFFFF</item>
+    </style>
+
+    <style name="MediumComponentEdittextUsername" parent="Widget.MaterialComponents.TextInputLayout.FilledBox.Dense">
+        <item name="shapeAppearanceOverlay">@style/ShapeAppearanceOverlay.MyApp.TextInputLayout.RoundedUsername</item>
+        <item name="boxStrokeWidth">0dp</item>
+    </style>
+    <style name="MediumComponentEdittextPassword" parent="Widget.MaterialComponents.TextInputLayout.FilledBox.Dense">
+        <item name="shapeAppearanceOverlay">@style/ShapeAppearanceOverlay.MyApp.TextInputLayout.RoundedPassword</item>
+        <item name="boxStrokeWidth">0dp</item>
+    </style>
+
+
+    <style name="ShapeAppearanceOverlay.MyApp.TextInputLayout.RoundedUsername" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSizeTopLeft">@dimen/login_rounded</item>
+        <item name="cornerSizeTopRight">@dimen/login_rounded</item>
+        <item name="cornerSizeBottomLeft">0dp</item>
+        <item name="cornerSizeBottomRight">0dp</item>
+        <item name="strokeColor">#fff</item>
+        <item name="boxCornerRadiusTopStart">@dimen/login_rounded</item>
+        <item name="boxCornerRadiusTopEnd">@dimen/login_rounded</item>
+        <item name="boxCornerRadiusBottomStart">0dp</item>
+        <item name="boxCornerRadiusBottomEnd">0dp</item>
+        <item name="boxBackgroundColor">#fff</item>
+    </style>
+
+    <style name="ShapeAppearanceOverlay.MyApp.TextInputLayout.RoundedPassword" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSizeTopLeft">0dp</item>
+        <item name="cornerSizeTopRight">0dp</item>
+        <item name="cornerSizeBottomLeft">@dimen/login_rounded</item>
+        <item name="cornerSizeBottomRight">@dimen/login_rounded</item>
+        <item name="strokeColor">#fff</item>
+        <item name="boxCornerRadiusTopStart">0dp</item>
+        <item name="boxCornerRadiusTopEnd">0dp</item>
+        <item name="boxCornerRadiusBottomStart">@dimen/login_rounded</item>
+        <item name="boxCornerRadiusBottomEnd">@dimen/login_rounded</item>
+        <item name="boxBackgroundColor">#fff</item>
+    </style>
+
+
+</resources>

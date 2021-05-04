@@ -1,0 +1,380 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:bind="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f2f2f2">
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        bind:ignore="MissingConstraints">
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="280dp"
+            android:orientation="vertical">
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="800dp"
+                android:layout_marginLeft="-200dp"
+                android:layout_marginTop="-30dp"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:background="@drawable/ic_model2"/>
+        </androidx.appcompat.widget.LinearLayoutCompat>
+    </FrameLayout>
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+        <LinearLayout
+            android:layout_marginBottom="70dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+                <LinearLayout
+                    android:id="@+id/backHome"
+                    android:layout_marginTop="50dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginBottom="20dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <LinearLayout
+                        android:layout_weight=".1"
+                        android:layout_width="0dp"
+                        android:layout_height="40dp">
+                        <RelativeLayout
+                            android:background="@drawable/outline_text"
+                            android:layout_width="40dp"
+                            android:layout_height="match_parent">
+                            <TextView
+                                android:id="@+id/back_page"
+                                android:layout_centerInParent="true"
+                                android:textStyle="bold"
+                                android:textSize="10pt"
+                                android:fontFamily="@font/fasolid900"
+                                android:textColor="#fff"
+                                android:text="&#xf104;"
+                                android:gravity="center"
+                                android:textAlignment="center"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content" />
+                        </RelativeLayout>
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_weight=".8"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent">
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <LinearLayout
+                                android:orientation="horizontal"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_centerInParent="true">
+                                <TextView
+                                    android:paddingLeft="20dp"
+                                    android:layout_centerInParent="true"
+                                    android:textStyle="bold"
+                                    android:textSize="15sp"
+                                    android:fontFamily="@font/montserratbold"
+                                    android:textColor="#fff"
+                                    android:text="Kembali"
+                                    android:gravity="center_vertical"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent" />
+                            </LinearLayout>
+                        </RelativeLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+
+
+
+
+
+                <LinearLayout
+                    android:padding="10dp"
+                    android:layout_marginTop="90dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+                    <LinearLayout
+                        android:layout_centerInParent="true"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/rounded_panel"
+                        android:padding="10dp"
+                        android:layout_margin="5dp">
+                        <LinearLayout
+                            android:padding="15dp"
+                            android:orientation="vertical"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_weight=".7"
+                                    android:layout_height="match_parent">
+                                    <RelativeLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent">
+                                        <LinearLayout
+                                            android:layout_centerInParent="true"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:orientation="vertical">
+                                            <TextView
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:text="JJSKDJK"
+                                                android:fontFamily="@font/montserratbold"
+                                                android:textSize="20sp"
+                                                android:id="@+id/txt_kode" />
+                                            <TextView
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:text="Tanggal Kadaluarsa:"
+                                                android:fontFamily="@font/poppins"
+                                                android:textSize="15sp"
+                                                android:layout_below="@id/txt_kode"
+                                                android:id="@+id/txt_kadaluarsa" />
+                                        </LinearLayout>
+                                    </RelativeLayout>
+                                </LinearLayout>
+                            </LinearLayout>
+
+
+
+                            <!--<LinearLayout
+                                android:layout_marginTop="20dp"
+                                android:padding="10dp"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+                                <TextView
+                                    android:textSize="10sp"
+                                    android:layout_width="match_parent"
+                                    android:fontFamily="@font/poppins"
+                                    android:layout_height="wrap_content"
+                                    android:text="Tanggal Pengisian" />
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:textSize="12sp"
+                                    android:fontFamily="@font/montserratbold"
+                                    android:text="10 Januari 1990" />
+                            </LinearLayout>-->
+
+
+
+                            <LinearLayout
+                                android:layout_marginTop="5dp"
+                                android:padding="10dp"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:fontFamily="@font/poppins"
+                                    android:layout_height="wrap_content"
+                                    android:textSize="10sp"
+                                    android:text="Jenis" />
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:textSize="12sp"
+                                    android:id="@+id/txt_varian"
+                                    android:fontFamily="@font/montserratbold"
+                                    android:text="Dry Chemical Powder" />
+                            </LinearLayout>
+
+
+                            <LinearLayout
+                                android:layout_marginTop="5dp"
+                                android:padding="10dp"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+                                <TextView
+                                    android:textSize="10sp"
+                                    android:layout_width="match_parent"
+                                    android:fontFamily="@font/poppins"
+                                    android:layout_height="wrap_content"
+                                    android:text="Satuan" />
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:textSize="12sp"
+                                    android:id="@+id/txt_satuan"
+                                    android:fontFamily="@font/montserratbold"
+                                    android:text="KG" />
+                            </LinearLayout>
+
+
+                            <LinearLayout
+                                android:layout_marginTop="5dp"
+                                android:padding="10dp"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+                                <TextView
+                                    android:textSize="10sp"
+                                    android:layout_width="match_parent"
+                                    android:fontFamily="@font/poppins"
+                                    android:layout_height="wrap_content"
+                                    android:text="Kapasitas" />
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:textSize="12sp"
+                                    android:id="@+id/txt_kapasitas"
+                                    android:fontFamily="@font/montserratbold"
+                                    android:text="11 - 20" />
+                            </LinearLayout>
+
+
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_centerInParent="true"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/rounded_panel"
+                        android:layout_margin="5dp">
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:padding="20dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+                            <LinearLayout
+                                android:visibility="visible"
+                                android:orientation="vertical"
+                                android:id="@+id/item_result_check"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+                                <LinearLayout
+                                    android:id="@+id/tanggal_click"
+                                    android:background="@drawable/rounded_panel"
+                                    android:orientation="horizontal"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+                                    <TextView
+                                        android:fontFamily="@font/poppins"
+                                        android:layout_width="0dp"
+                                        android:text="Maret 2020"
+                                        android:textSize="12.5sp"
+                                        android:layout_gravity="center"
+                                        android:gravity="center"
+                                        android:textColor="@color/colorPrimaryDark"
+                                        android:textAlignment="center"
+                                        android:id="@+id/txt_current_tanggal"
+                                        android:layout_height="match_parent"
+                                        android:layout_weight=".9" />
+                                    <View
+                                        android:background="@drawable/spinner_arrow"
+                                        android:layout_width="0dp"
+                                        android:layout_weight=".1"
+                                        android:layout_height="30dp" />
+                                </LinearLayout>
+                                <LinearLayout
+                                    android:padding="15dp"
+                                    android:layout_marginTop="25dp"
+                                    android:orientation="horizontal"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+                                    <ImageView
+                                        android:layout_gravity="center"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight=".2"
+                                        android:src="@drawable/ic_account"/>
+                                    <LinearLayout
+                                        android:orientation="vertical"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight=".8">
+                                        <TextView
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:id="@+id/txt_jabatan"
+                                            android:text="Inspector"
+                                            android:textSize="10sp"
+                                            android:fontFamily="@font/poppins" />
+                                        <TextView
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:id="@+id/txt_nama_pemeriksa"
+                                            android:text="Inspector"
+                                            android:textSize="15sp"
+                                            android:textColor="@color/colorPrimaryDark"
+                                            android:fontFamily="@font/montserratbold" />
+                                    </LinearLayout>
+                                </LinearLayout>
+                                <androidx.recyclerview.widget.RecyclerView
+                                    android:layout_marginTop="15dp"
+                                    android:id="@+id/load_check"
+                                    android:nestedScrollingEnabled="false"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent" />
+                            </LinearLayout>
+                            <LinearLayout
+                                android:id="@+id/tidak_ada_data_cek"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+                                <TextView
+                                    android:fontFamily="@font/montserratbold"
+                                    android:textSize="15sp"
+                                    android:textAlignment="center"
+                                    android:text="Tidak ada pengecekkan"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content" />
+                            </LinearLayout>
+
+                        </LinearLayout>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:padding="20dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <com.google.android.material.button.MaterialButton
+                            android:layout_gravity="center"
+                            android:id="@+id/btn_return"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:fontFamily="@font/poppins"
+                            android:text="Kembali"
+                            app:backgroundTint="@null"
+                            android:background="@drawable/button_rounded_default"
+                            android:elevation="10dp"
+                            android:textAlignment="center"
+                            android:textAllCaps="false"
+                            app:cornerRadius="5dp"
+                            android:padding="9dp"
+                            android:textColor="#fff"
+                            android:textSize="14sp" />
+                    </LinearLayout>
+                </LinearLayout>
+            </FrameLayout>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,915 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/default_background"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <include layout="@layout/header" />
+    <FrameLayout
+        android:elevation="2dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:ignore="MissingConstraints">
+        <LinearLayout
+            android:id="@+id/back_page"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="20dp"
+            android:layout_marginTop="50dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <LinearLayout
+                android:layout_weight=".1"
+                android:layout_width="0dp"
+                android:layout_height="40dp">
+                <RelativeLayout
+                    android:background="@drawable/outline_text"
+                    android:layout_width="40dp"
+                    android:layout_height="match_parent">
+                    <TextView
+                        android:layout_centerInParent="true"
+                        android:textStyle="bold"
+                        android:textSize="10pt"
+                        android:fontFamily="@font/fasolid900"
+                        android:textColor="#fff"
+                        android:text="&#xf104;"
+                        android:gravity="center"
+                        android:textAlignment="center"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                </RelativeLayout>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_weight=".6"
+                android:layout_width="0dp"
+                android:layout_height="match_parent">
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_centerInParent="true">
+                        <TextView
+                            android:layout_centerInParent="true"
+                            android:textStyle="bold"
+                            android:textSize="15sp"
+                            android:paddingLeft="20dp"
+                            android:textColor="#fff"
+                            android:text="Buat SWA"
+                            android:fontFamily="@font/montserratbold"
+                            android:gravity="center_vertical"
+                            android:textAlignment="viewStart"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            tools:ignore="RtlCompat" />
+                    </LinearLayout>
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_weight=".2"
+                android:layout_width="0dp"
+                android:layout_height="match_parent">
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_centerInParent="true">
+                        <ImageView
+                            android:layout_width="100dp"
+                            android:layout_height="30dp" />
+                    </LinearLayout>
+                </RelativeLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </FrameLayout>
+    <LinearLayout
+        android:paddingTop="70dp"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:ignore="MissingConstraints">
+        <RelativeLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginBottom="80dp"
+                android:paddingTop="20dp"
+                android:background="@drawable/rounded_panel"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent">
+                <ScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <LinearLayout
+                            android:paddingLeft="20dp"
+                            android:paddingRight="20dp"
+                            android:orientation="vertical"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+                            <LinearLayout
+                                android:orientation="vertical"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:elevation="9dp">
+
+
+
+                                <LinearLayout
+                                    android:orientation="horizontal"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+                                    <LinearLayout
+                                        android:orientation="vertical"
+                                        android:layout_width="0dp"
+                                        android:layout_weight="1"
+                                        android:layout_height="wrap_content">
+                                        <TextView
+                                            android:fontFamily="@font/montserratbold"
+                                            android:text="Mitra"
+                                            android:textColor="@color/colorPrimary"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content" />
+                                        <TextView
+                                            android:layout_marginBottom="10dp"
+                                            android:fontFamily="@font/poppins"
+                                            android:id="@+id/txt_nama_mitra"
+                                            android:text="__Nama Mitra__"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content" />
+                                    </LinearLayout>
+                                </LinearLayout>
+
+
+
+
+
+                                <LinearLayout
+                                    android:orientation="horizontal"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+                                    <LinearLayout
+                                        android:orientation="vertical"
+                                        android:layout_width="0dp"
+                                        android:layout_weight="1"
+                                        android:layout_height="wrap_content">
+                                        <TextView
+                                            android:fontFamily="@font/montserratbold"
+                                            android:text="Detail Pekerjaan"
+                                            android:textColor="@color/colorPrimary"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content" />
+                                        <TextView
+                                            android:layout_marginBottom="10dp"
+                                            android:fontFamily="@font/poppins"
+                                            android:id="@+id/txt_detail_pekerjaan"
+                                            android:text="__Detail Pekerjaan__"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content" />
+                                    </LinearLayout>
+                                </LinearLayout>
+
+
+
+                                <LinearLayout
+                                    android:layout_marginTop="10dp"
+                                    android:orientation="horizontal"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+                                    <LinearLayout
+                                        android:orientation="vertical"
+                                        android:layout_width="0dp"
+                                        android:layout_weight="1"
+                                        android:layout_height="wrap_content">
+                                        <TextView
+                                            android:fontFamily="@font/montserratbold"
+                                            android:text="Tanggal"
+                                            android:textColor="@color/colorPrimary"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content" />
+                                        <TextView
+                                            android:layout_marginBottom="10dp"
+                                            android:fontFamily="@font/poppins"
+                                            android:id="@+id/txt_tanggal_pekerjaan"
+                                            android:text="__Tanggal Pekerjaan__"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content" />
+                                    </LinearLayout>
+                                </LinearLayout>
+
+
+                                <LinearLayout
+                                    android:layout_marginTop="10dp"
+                                    android:orientation="horizontal"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+                                    <LinearLayout
+                                        android:orientation="vertical"
+                                        android:layout_width="0dp"
+                                        android:layout_weight="1"
+                                        android:layout_height="wrap_content">
+                                        <TextView
+                                            android:fontFamily="@font/montserratbold"
+                                            android:text="Kriteria"
+                                            android:textColor="@color/colorPrimary"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content" />
+                                        <LinearLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:orientation="vertical">
+
+
+                                            <androidx.recyclerview.widget.RecyclerView
+                                                android:layout_marginTop="15dp"
+                                                android:id="@+id/load_kriteria"
+                                                android:nestedScrollingEnabled="false"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content" />
+
+
+
+
+
+
+
+                                            <!--LinearLayout
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_weight=".9">
+                                                <LinearLayout
+                                                    android:orientation="horizontal"
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="wrap_content">
+                                                    <LinearLayout
+                                                        android:layout_width="0dp"
+                                                        android:layout_weight=".7"
+                                                        android:layout_height="match_parent"
+                                                        android:orientation="vertical"
+                                                        android:padding="10dp">
+                                                        <TextView
+                                                            android:layout_width="match_parent"
+                                                            android:layout_height="wrap_content"
+                                                            android:textSize="5.5pt"
+                                                            android:text="Working Permit yang  telah disahkan oleh pejabat yang berwenang"
+                                                            android:layout_weight=".8" />
+                                                    </LinearLayout>
+                                                    <LinearLayout
+                                                        android:orientation="vertical"
+                                                        android:layout_width="0dp"
+                                                        android:layout_height="match_parent"
+                                                        android:layout_weight=".2">
+                                                        <RelativeLayout
+                                                            android:padding="5dp"
+                                                            android:layout_width="match_parent"
+                                                            android:layout_height="match_parent">
+                                                            <com.google.android.material.switchmaterial.SwitchMaterial
+                                                                android:layout_width="match_parent"
+                                                                android:layout_height="wrap_content" />
+                                                        </RelativeLayout>
+                                                    </LinearLayout>
+                                                </LinearLayout>
+                                            </LinearLayout>
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                            <LinearLayout
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_weight=".9">
+                                                <LinearLayout
+                                                    android:orientation="horizontal"
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="wrap_content">
+                                                    <LinearLayout
+                                                        android:layout_width="0dp"
+                                                        android:layout_weight=".7"
+                                                        android:layout_height="match_parent"
+                                                        android:orientation="vertical"
+                                                        android:padding="10dp">
+                                                        <TextView
+                                                            android:layout_width="match_parent"
+                                                            android:layout_height="wrap_content"
+                                                            android:textSize="5.5pt"
+                                                            android:text="SOP(Prosedur/Instruksi Kerja/formulir Checklist)"
+                                                            android:layout_weight=".8" />
+                                                    </LinearLayout>
+                                                    <LinearLayout
+                                                        android:orientation="vertical"
+                                                        android:layout_width="0dp"
+                                                        android:layout_height="match_parent"
+                                                        android:layout_weight=".2">
+                                                        <RelativeLayout
+                                                            android:padding="5dp"
+                                                            android:layout_width="match_parent"
+                                                            android:layout_height="match_parent">
+                                                            <com.google.android.material.switchmaterial.SwitchMaterial
+                                                                android:layout_width="match_parent"
+                                                                android:layout_height="wrap_content" />
+                                                        </RelativeLayout>
+                                                    </LinearLayout>
+                                                </LinearLayout>
+                                            </LinearLayout>
+
+
+
+
+
+
+
+
+                                            <LinearLayout
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_weight=".9">
+                                                <LinearLayout
+                                                    android:orientation="horizontal"
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="wrap_content">
+                                                    <LinearLayout
+                                                        android:layout_width="0dp"
+                                                        android:layout_weight=".7"
+                                                        android:layout_height="match_parent"
+                                                        android:orientation="vertical"
+                                                        android:padding="10dp">
+                                                        <TextView
+                                                            android:layout_width="match_parent"
+                                                            android:layout_height="wrap_content"
+                                                            android:textSize="5.5pt"
+                                                            android:text="Pengawas pekerjaan yang berkompeten"
+                                                            android:layout_weight=".8" />
+                                                    </LinearLayout>
+                                                    <LinearLayout
+                                                        android:orientation="vertical"
+                                                        android:layout_width="0dp"
+                                                        android:layout_height="match_parent"
+                                                        android:layout_weight=".2">
+                                                        <RelativeLayout
+                                                            android:padding="5dp"
+                                                            android:layout_width="match_parent"
+                                                            android:layout_height="match_parent">
+                                                            <com.google.android.material.switchmaterial.SwitchMaterial
+                                                                android:layout_width="match_parent"
+                                                                android:layout_height="wrap_content" />
+                                                        </RelativeLayout>
+                                                    </LinearLayout>
+                                                </LinearLayout>
+                                            </LinearLayout>
+
+
+
+
+
+
+
+
+                                            <LinearLayout
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_weight=".9">
+                                                <LinearLayout
+                                                    android:orientation="horizontal"
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="wrap_content">
+                                                    <LinearLayout
+                                                        android:layout_width="0dp"
+                                                        android:layout_weight=".7"
+                                                        android:layout_height="match_parent"
+                                                        android:orientation="vertical"
+                                                        android:padding="10dp">
+                                                        <TextView
+                                                            android:layout_width="match_parent"
+                                                            android:layout_height="wrap_content"
+                                                            android:textSize="5.5pt"
+                                                            android:text="Pekerja memiliki sertifikat kompetensi"
+                                                            android:layout_weight=".8" />
+                                                    </LinearLayout>
+                                                    <LinearLayout
+                                                        android:orientation="vertical"
+                                                        android:layout_width="0dp"
+                                                        android:layout_height="match_parent"
+                                                        android:layout_weight=".2">
+                                                        <RelativeLayout
+                                                            android:padding="5dp"
+                                                            android:layout_width="match_parent"
+                                                            android:layout_height="match_parent">
+                                                            <com.google.android.material.switchmaterial.SwitchMaterial
+                                                                android:layout_width="match_parent"
+                                                                android:layout_height="wrap_content" />
+                                                        </RelativeLayout>
+                                                    </LinearLayout>
+                                                </LinearLayout>
+                                            </LinearLayout>
+
+
+
+
+
+
+
+
+
+
+                                            <LinearLayout
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_weight=".9">
+                                                <LinearLayout
+                                                    android:orientation="horizontal"
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="wrap_content">
+                                                    <LinearLayout
+                                                        android:layout_width="0dp"
+                                                        android:layout_weight=".7"
+                                                        android:layout_height="match_parent"
+                                                        android:orientation="vertical"
+                                                        android:padding="10dp">
+                                                        <TextView
+                                                            android:layout_width="match_parent"
+                                                            android:layout_height="wrap_content"
+                                                            android:textSize="5.5pt"
+                                                            android:text="Peralatan kerja yang layak dan sesuai dengan jenis pekerjaan"
+                                                            android:layout_weight=".8" />
+                                                    </LinearLayout>
+                                                    <LinearLayout
+                                                        android:orientation="vertical"
+                                                        android:layout_width="0dp"
+                                                        android:layout_height="match_parent"
+                                                        android:layout_weight=".2">
+                                                        <RelativeLayout
+                                                            android:padding="5dp"
+                                                            android:layout_width="match_parent"
+                                                            android:layout_height="match_parent">
+                                                            <com.google.android.material.switchmaterial.SwitchMaterial
+                                                                android:layout_width="match_parent"
+                                                                android:layout_height="wrap_content" />
+                                                        </RelativeLayout>
+                                                    </LinearLayout>
+                                                </LinearLayout>
+                                            </LinearLayout>
+
+
+
+
+
+
+
+
+
+                                            <LinearLayout
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_weight=".9">
+                                                <LinearLayout
+                                                    android:orientation="horizontal"
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="wrap_content">
+                                                    <LinearLayout
+                                                        android:layout_width="0dp"
+                                                        android:layout_weight=".7"
+                                                        android:layout_height="match_parent"
+                                                        android:orientation="vertical"
+                                                        android:padding="10dp">
+                                                        <TextView
+                                                            android:layout_width="match_parent"
+                                                            android:layout_height="wrap_content"
+                                                            android:textSize="5.5pt"
+                                                            android:text="Rambu-rambu K3 dan LOTO"
+                                                            android:layout_weight=".8" />
+                                                    </LinearLayout>
+                                                    <LinearLayout
+                                                        android:orientation="vertical"
+                                                        android:layout_width="0dp"
+                                                        android:layout_height="match_parent"
+                                                        android:layout_weight=".2">
+                                                        <RelativeLayout
+                                                            android:padding="5dp"
+                                                            android:layout_width="match_parent"
+                                                            android:layout_height="match_parent">
+                                                            <com.google.android.material.switchmaterial.SwitchMaterial
+                                                                android:layout_width="match_parent"
+                                                                android:layout_height="wrap_content" />
+                                                        </RelativeLayout>
+                                                    </LinearLayout>
+                                                </LinearLayout>
+                                            </LinearLayout>
+
+
+
+
+
+
+                                            <LinearLayout
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_weight=".9">
+                                                <LinearLayout
+                                                    android:orientation="horizontal"
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="wrap_content">
+                                                    <LinearLayout
+                                                        android:layout_width="0dp"
+                                                        android:layout_weight=".7"
+                                                        android:layout_height="match_parent"
+                                                        android:orientation="vertical"
+                                                        android:padding="10dp">
+                                                        <TextView
+                                                            android:layout_width="match_parent"
+                                                            android:layout_height="wrap_content"
+                                                            android:textSize="5.5pt"
+                                                            android:text="Alat Pelindung Diri(APD) yang layak tersedia sesuai dengan kebutuhan lapangan"
+                                                            android:layout_weight=".8" />
+                                                    </LinearLayout>
+                                                    <LinearLayout
+                                                        android:orientation="vertical"
+                                                        android:layout_width="0dp"
+                                                        android:layout_height="match_parent"
+                                                        android:layout_weight=".2">
+                                                        <RelativeLayout
+                                                            android:padding="5dp"
+                                                            android:layout_width="match_parent"
+                                                            android:layout_height="match_parent">
+                                                            <com.google.android.material.switchmaterial.SwitchMaterial
+                                                                android:layout_width="match_parent"
+                                                                android:layout_height="wrap_content" />
+                                                        </RelativeLayout>
+                                                    </LinearLayout>
+                                                </LinearLayout>
+                                            </LinearLayout-->
+
+
+
+
+
+
+
+
+
+
+                                        </LinearLayout>
+                                    </LinearLayout>
+                                </LinearLayout>
+
+
+
+
+                                <LinearLayout
+                                    android:layout_marginTop="10dp"
+                                    android:orientation="horizontal"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+                                    <LinearLayout
+                                        android:orientation="vertical"
+                                        android:layout_width="0dp"
+                                        android:layout_weight="1"
+                                        android:layout_height="wrap_content">
+                                        <TextView
+                                            android:fontFamily="@font/montserratbold"
+                                            android:text="Tindakan"
+                                            android:textColor="@color/colorPrimary"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content" />
+                                        <LinearLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:orientation="horizontal">
+                                            <LinearLayout
+                                                android:orientation="vertical"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content">
+                                                <LinearLayout
+                                                    android:orientation="vertical"
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="wrap_content">
+                                                    <LinearLayout
+                                                        android:layout_width="match_parent"
+                                                        android:layout_height="match_parent"
+                                                        android:orientation="vertical"
+                                                        android:padding="10dp">
+                                                    </LinearLayout>
+                                                    <LinearLayout
+                                                        android:orientation="vertical"
+                                                        android:layout_width="match_parent"
+                                                        android:layout_height="match_parent">
+                                                        <RelativeLayout
+                                                            android:padding="5dp"
+                                                            android:layout_width="match_parent"
+                                                            android:layout_height="match_parent">
+                                                            <com.google.android.material.textfield.TextInputLayout
+                                                                android:id="@+id/layout_txt_sejak"
+                                                                android:layout_width="match_parent"
+                                                                android:layout_height="wrap_content"
+                                                                app:hintTextColor="#808080"
+                                                                app:boxBackgroundColor="#fff"
+                                                                app:boxStrokeColor="#fff"
+                                                                app:boxStrokeWidth="0dp"
+                                                                style="@style/MediumComponentEdittextUsername"
+                                                                android:hint="Dihentikan Sejak">
+                                                                <com.google.android.material.textfield.TextInputEditText
+                                                                    android:id="@+id/txt_sejak"
+                                                                    android:layout_width="match_parent"
+                                                                    android:layout_weight="1"
+                                                                    android:fontFamily="@font/poppins"
+                                                                    android:layout_height="wrap_content"
+                                                                    android:drawablePadding="20dp"
+                                                                    android:drawableStart="@drawable/ic_baseline_calendar_today_24"
+                                                                    android:importantForAutofill="no"
+                                                                    android:hint="__/__/___"
+                                                                    android:textColor="#000"
+                                                                    android:inputType="date" />
+                                                            </com.google.android.material.textfield.TextInputLayout>
+                                                        </RelativeLayout>
+                                                    </LinearLayout>
+                                                </LinearLayout>
+
+
+
+                                                <LinearLayout
+                                                    android:orientation="vertical"
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="wrap_content">
+                                                    <LinearLayout
+                                                        android:layout_width="match_parent"
+                                                        android:layout_height="match_parent"
+                                                        android:orientation="vertical"
+                                                        android:padding="10dp">
+
+                                                    </LinearLayout>
+                                                    <LinearLayout
+                                                        android:orientation="vertical"
+                                                        android:layout_width="match_parent"
+                                                        android:layout_height="match_parent">
+                                                        <RelativeLayout
+                                                            android:padding="5dp"
+                                                            android:layout_width="match_parent"
+                                                            android:layout_height="match_parent">
+                                                            <com.google.android.material.textfield.TextInputLayout
+                                                                android:id="@+id/layout_txt_sampai"
+                                                                android:layout_width="match_parent"
+                                                                android:layout_height="wrap_content"
+                                                                app:hintTextColor="#808080"
+                                                                app:boxBackgroundColor="#fff"
+                                                                app:boxStrokeColor="#fff"
+                                                                app:boxStrokeWidth="0dp"
+                                                                style="@style/MediumComponentEdittextUsername"
+                                                                android:hint="Dihentikan Sampai">
+                                                                <com.google.android.material.textfield.TextInputEditText
+                                                                    android:id="@+id/txt_sampai"
+                                                                    android:layout_width="match_parent"
+                                                                    android:layout_weight="1"
+                                                                    android:layout_height="wrap_content"
+                                                                    android:drawablePadding="20dp"
+                                                                    android:fontFamily="@font/poppins"
+                                                                    android:drawableStart="@drawable/ic_baseline_calendar_today_24"
+                                                                    android:importantForAutofill="no"
+                                                                    android:hint="__/__/____"
+                                                                    android:textColor="#000"
+                                                                    android:inputType="date" />
+                                                            </com.google.android.material.textfield.TextInputLayout>
+                                                        </RelativeLayout>
+                                                    </LinearLayout>
+                                                </LinearLayout>
+
+
+
+
+
+                                                <LinearLayout
+                                                    android:orientation="vertical"
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="wrap_content">
+                                                    <LinearLayout
+                                                        android:layout_width="match_parent"
+                                                        android:layout_height="match_parent"
+                                                        android:orientation="vertical"
+                                                        android:padding="10dp">
+                                                        <TextView
+                                                            android:fontFamily="@font/montserratbold"
+                                                            android:text="Alasan Pekerjaan Dihentikan"
+                                                            android:textColor="@color/colorPrimary"
+                                                            android:layout_width="match_parent"
+                                                            android:layout_height="wrap_content" />
+                                                    </LinearLayout>
+                                                    <LinearLayout
+                                                        android:orientation="vertical"
+                                                        android:layout_width="match_parent"
+                                                        android:layout_height="match_parent">
+                                                        <LinearLayout
+                                                            android:orientation="vertical"
+                                                            android:layout_width="match_parent"
+                                                            android:layout_height="wrap_content">
+                                                            <LinearLayout
+                                                                android:layout_width="match_parent"
+                                                                android:layout_height="match_parent"
+                                                                android:orientation="vertical"
+                                                                android:padding="10dp">
+                                                                <TextView
+                                                                    android:layout_width="match_parent"
+                                                                    android:layout_height="wrap_content"
+                                                                    android:textSize="5.5pt"
+                                                                    android:text="Tindakan Membahayakan:"
+                                                                    android:layout_weight=".8" />
+                                                                <LinearLayout
+                                                                    android:id="@+id/upload_tindakan"
+                                                                    android:layout_marginTop="10dp"
+                                                                    android:layout_width="match_parent"
+                                                                    android:layout_height="wrap_content">
+                                                                    <RelativeLayout
+                                                                        android:background="@drawable/border_style_dotted"
+                                                                        android:layout_width="match_parent"
+                                                                        android:layout_height="wrap_content">
+                                                                        <ImageView
+                                                                            app:tint="#ccc"
+                                                                            android:layout_centerInParent="true"
+                                                                            android:backgroundTintMode="screen"
+                                                                            android:backgroundTint="#f2f2f2"
+                                                                            android:layout_width="100dp"
+                                                                            android:layout_height="100dp"
+                                                                            android:src="@drawable/ic_camera" />
+                                                                    </RelativeLayout>
+                                                                </LinearLayout>
+                                                            </LinearLayout>
+                                                            <LinearLayout
+                                                                android:orientation="vertical"
+                                                                android:layout_width="match_parent"
+                                                                android:layout_height="match_parent">
+                                                                <androidx.recyclerview.widget.RecyclerView
+                                                                    android:nestedScrollingEnabled="false"
+                                                                    android:layout_width="match_parent"
+                                                                    android:layout_height="wrap_content"
+                                                                    android:id="@+id/list_tindakan_bahaya" />
+                                                            </LinearLayout>
+                                                        </LinearLayout>
+
+
+
+
+                                                        <LinearLayout
+                                                            android:layout_marginTop="20dp"
+                                                            android:orientation="vertical"
+                                                            android:layout_width="match_parent"
+                                                            android:layout_height="wrap_content">
+                                                            <LinearLayout
+                                                                android:layout_width="match_parent"
+                                                                android:layout_height="match_parent"
+                                                                android:orientation="vertical"
+                                                                android:padding="10dp">
+                                                                <TextView
+                                                                    android:layout_width="match_parent"
+                                                                    android:layout_height="wrap_content"
+                                                                    android:textSize="5.5pt"
+                                                                    android:text="Kondisi Membahayakan:"
+                                                                    android:layout_weight=".8" />
+                                                                <LinearLayout
+                                                                    android:id="@+id/upload_kondisi"
+                                                                    android:layout_marginTop="10dp"
+                                                                    android:layout_width="match_parent"
+                                                                    android:layout_height="wrap_content">
+                                                                    <RelativeLayout
+                                                                        android:background="@drawable/border_style_dotted"
+                                                                        android:layout_width="match_parent"
+                                                                        android:layout_height="wrap_content">
+                                                                        <ImageView
+                                                                            app:tint="#ccc"
+                                                                            android:layout_centerInParent="true"
+                                                                            android:backgroundTintMode="screen"
+                                                                            android:backgroundTint="#f2f2f2"
+                                                                            android:layout_width="100dp"
+                                                                            android:layout_height="100dp"
+                                                                            android:src="@drawable/ic_camera" />
+                                                                    </RelativeLayout>
+                                                                </LinearLayout>
+                                                            </LinearLayout>
+                                                            <LinearLayout
+                                                                android:orientation="vertical"
+                                                                android:layout_width="match_parent"
+                                                                android:layout_height="match_parent">
+                                                                <androidx.recyclerview.widget.RecyclerView
+                                                                    android:layout_width="match_parent"
+                                                                    android:layout_height="wrap_content"
+                                                                    android:id="@+id/list_kondisi_bahaya" />
+                                                            </LinearLayout>
+                                                        </LinearLayout>
+                                                    </LinearLayout>
+                                                </LinearLayout>
+
+
+
+
+
+
+
+
+                                            </LinearLayout>
+                                        </LinearLayout>
+                                    </LinearLayout>
+                                </LinearLayout>
+
+
+
+
+
+
+
+                                <LinearLayout
+                                    android:layout_marginTop="10dp"
+                                    android:orientation="horizontal"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+                                    <LinearLayout
+                                        android:orientation="vertical"
+                                        android:layout_width="0dp"
+                                        android:layout_weight="1"
+                                        android:layout_height="wrap_content">
+                                        <TextView
+                                            android:fontFamily="@font/montserratbold"
+                                            android:text="Saran"
+                                            android:textColor="@color/colorPrimary"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content" />
+                                        <LinearLayout
+                                            android:id="@+id/call_me"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:orientation="horizontal">
+                                            <EditText
+                                                android:padding="10dp"
+                                                android:hint="Syarat Pemenuhan Kondisi agar Working Permit dapat dilanjutkan"
+                                                android:gravity="top"
+                                                android:textSize="6pt"
+                                                android:id="@+id/txt_keterangan_swa"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="200dp" />
+                                        </LinearLayout>
+                                    </LinearLayout>
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:orientation="horizontal"
+                                android:layout_marginTop="50dp"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+
+
+                                <com.google.android.material.button.MaterialButton
+                                    android:layout_gravity="center"
+                                    android:id="@+id/btn_submit_swa"
+                                    android:layout_width="0dp"
+                                    android:layout_weight=".5"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/poppins"
+                                    android:text="Submit"
+                                    android:layout_margin="10dp"
+                                    android:textAlignment="center"
+                                    android:textAllCaps="false"
+                                    app:cornerRadius="5dp"
+                                    android:padding="0dp"
+                                    app:backgroundTint="@null"
+                                    android:background="@drawable/button_rounded_default"
+                                    android:textColor="#fff"
+                                    android:textSize="14sp" />
+                            </LinearLayout>
+
+                        </LinearLayout>
+                    </RelativeLayout>
+                </ScrollView>
+            </LinearLayout>
+        </RelativeLayout>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

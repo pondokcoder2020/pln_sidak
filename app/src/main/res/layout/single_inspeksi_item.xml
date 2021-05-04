@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+    <androidx.cardview.widget.CardView
+        android:layout_centerInParent="true"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:cardCornerRadius="20dp"
+        app:cardElevation="5dp"
+        android:background="#fff"
+        android:padding="10dp"
+        android:layout_margin="2.5dp"
+        tools:ignore="MissingConstraints">
+        <LinearLayout
+            android:padding="10dp"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:ignore="MissingConstraints">
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".9">
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_weight=".5"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:padding="10dp">
+
+                        <TextView
+                            android:id="@+id/txt_nama"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/montserratbold"
+                            android:text="Roda"
+                            android:textSize="13sp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight=".5">
+                        <RelativeLayout
+                            android:padding="5dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+                            <RadioGroup
+                                android:layout_centerInParent="true"
+                                android:checkedButton="@+id/bad"
+                                android:id="@+id/toggle"
+                                android:layout_width="match_parent"
+                                android:layout_height="30dp"
+                                android:background="@drawable/primary_outline"
+                                android:orientation="horizontal">
+
+                                <RadioButton
+                                    android:layout_marginTop="1dp"
+                                    android:layout_marginBottom="1dp"
+                                    android:layout_marginLeft="1dp"
+                                    android:id="@+id/good"
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:button="@null"
+                                    android:background="@drawable/toggle_widget_background"
+                                    android:gravity="center"
+                                    android:textColor="@drawable/toggle_widget_color"
+                                    android:text="Good" />
+
+                                <RadioButton
+                                    android:layout_marginTop="1dp"
+                                    android:layout_marginBottom="1dp"
+                                    android:layout_marginLeft="1dp"
+                                    android:id="@+id/fair"
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:button="@null"
+                                    android:background="@drawable/toggle_widget_background"
+                                    android:gravity="center"
+                                    android:textColor="@drawable/toggle_widget_color"
+                                    android:text="Fair" />
+
+                                <RadioButton
+                                    android:layout_marginRight="1dp"
+                                    android:layout_marginTop="1dp"
+                                    android:layout_marginBottom="1dp"
+                                    android:id="@+id/bad"
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:button="@null"
+                                    android:background="@drawable/toggle_widget_background"
+                                    android:textColor="@drawable/toggle_widget_color"
+                                    android:gravity="center"
+                                    android:text="Bad" />
+                            </RadioGroup>
+                        </RelativeLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+</LinearLayout>

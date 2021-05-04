@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:bind="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f2f2f2">
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+        <LinearLayout
+            android:layout_marginBottom="80dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="match_parent"
+                    android:layout_height="300dp"
+                    android:orientation="vertical">
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:layout_width="800dp"
+                        android:layout_marginLeft="-200dp"
+                        android:layout_marginTop="-30dp"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/ic_model2"/>
+                </androidx.appcompat.widget.LinearLayoutCompat>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <LinearLayout
+                            android:id="@+id/layout_top_guest"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:paddingTop="40dp"
+                            android:paddingLeft="10dp"
+                            android:paddingRight="10dp"
+                            android:layout_marginTop="8dp"
+                            android:weightSum="4">
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="horizontal">
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical"
+                                    android:layout_marginTop="50dp"
+                                    android:layout_marginLeft="10dp"
+                                    android:layout_marginRight="10dp"
+                                    android:layout_weight="3">
+
+
+                                    <TextView
+                                        android:id="@+id/welcome2"
+                                        android:layout_width="wrap_content"
+                                        android:layout_weight="1"
+                                        android:layout_height="wrap_content"
+                                        android:fontFamily="@font/poppins"
+                                        android:text="Welcome Back,"
+                                        android:textSize="15sp"
+                                        android:textColor="#f2f2f2" />
+                                    <TextView
+                                        android:text="Hendry Tanaka"
+                                        android:id="@+id/welcome_name"
+                                        android:layout_width="wrap_content"
+                                        android:layout_weight="1"
+                                        android:layout_height="wrap_content"
+                                        android:fontFamily="@font/montserratbold"
+                                        android:textSize="20sp"
+                                        android:textColor="#fff" />
+                                    <LinearLayout
+                                        android:layout_width="250dp"
+                                        android:layout_height="wrap_content"
+                                        android:orientation="horizontal">
+                                        <TextView
+                                            android:text="&#xf3c5;"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:fontFamily="@font/fasolid900"
+                                            android:textSize="12.5sp"
+                                            android:textColor="#ff4444" />
+                                        <TextView
+                                            android:paddingLeft="10dp"
+                                            android:text="Unit"
+                                            android:id="@+id/welcome_unit"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:fontFamily="@font/poppins"
+                                            android:textSize="12.5sp"
+                                            android:textColor="#fff" />
+                                    </LinearLayout>
+                                </LinearLayout>
+                            </LinearLayout>
+                        </LinearLayout>
+                    </FrameLayout>
+                    <FrameLayout
+                        android:layout_marginTop="-100dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <ImageView
+                            android:layout_marginRight="25dp"
+                            android:id="@+id/home_profile"
+                            android:layout_gravity="right"
+                            android:layout_width="100dp"
+                            android:layout_height="100dp" />
+                    </FrameLayout>
+
+
+                    <LinearLayout
+                        android:layout_marginTop="20dp"
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="0dp">
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+                            <LinearLayout
+                                android:orientation="horizontal"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+                                <TextView
+                                    android:textSize="15sp"
+                                    android:layout_marginTop="20dp"
+                                    android:layout_marginLeft="20dp"
+                                    android:layout_marginRight="20dp"
+                                    android:fontFamily="@font/montserratbold"
+                                    android:textColor="#fff"
+                                    android:layout_width="0dp"
+                                    android:layout_weight=".5"
+                                    android:layout_height="wrap_content"
+                                    android:text="Fire Protection Unit" />
+                                <TextView
+                                    android:textSize="15sp"
+                                    android:layout_marginTop="20dp"
+                                    android:layout_marginLeft="20dp"
+                                    android:layout_marginRight="20dp"
+                                    android:fontFamily="@font/poppins"
+                                    android:textColor="#fff"
+                                    android:id="@+id/btn_view_fpu_all"
+                                    android:layout_width="0dp"
+                                    android:textAlignment="viewEnd"
+                                    android:layout_weight=".2"
+                                    android:layout_height="wrap_content"
+                                    android:text="view all" />
+                            </LinearLayout>
+                            <androidx.recyclerview.widget.RecyclerView
+                                android:layout_marginLeft="20dp"
+                                android:layout_marginRight="20dp"
+                                android:id="@+id/load_kategori"
+                                android:nestedScrollingEnabled="false"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="0dp">
+                        <LinearLayout
+                            android:orientation="horizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+                            <TextView
+                                android:textSize="15sp"
+                                android:layout_marginTop="20dp"
+                                android:layout_marginLeft="20dp"
+                                android:layout_marginRight="20dp"
+                                android:fontFamily="@font/montserratbold"
+                                android:textColor="@color/colorPrimary"
+                                android:layout_width="0dp"
+                                android:layout_weight=".5"
+                                android:layout_height="wrap_content"
+                                android:text="Tools Kesehatan" />
+                            <TextView
+                                android:textSize="15sp"
+                                android:layout_marginTop="20dp"
+                                android:layout_marginLeft="20dp"
+                                android:layout_marginRight="20dp"
+                                android:fontFamily="@font/poppins"
+                                android:textColor="#808080"
+                                android:id="@+id/btn_view_kesehatan_all"
+                                android:layout_width="0dp"
+                                android:textAlignment="viewEnd"
+                                android:layout_weight=".2"
+                                android:layout_height="wrap_content"
+                                android:text="view all" />
+                        </LinearLayout>
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:layout_margin="20dp"
+                            android:id="@+id/load_kesehatan"
+                            android:nestedScrollingEnabled="false"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" />
+                    </LinearLayout>
+
+
+
+
+
+
+
+
+
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="0dp">
+                        <LinearLayout
+                            android:orientation="horizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+                            <TextView
+                                android:textSize="15sp"
+                                android:layout_marginTop="20dp"
+                                android:layout_marginLeft="20dp"
+                                android:layout_marginRight="20dp"
+                                android:fontFamily="@font/montserratbold"
+                                android:textColor="@color/colorPrimary"
+                                android:layout_width="0dp"
+                                android:layout_weight=".5"
+                                android:layout_height="wrap_content"
+                                android:text="Dokumen" />
+                        </LinearLayout>
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:layout_margin="20dp"
+                            android:id="@+id/load_document"
+                            android:nestedScrollingEnabled="false"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" />
+                    </LinearLayout>
+
+
+
+
+
+
+
+
+
+
+                </LinearLayout>
+            </FrameLayout>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

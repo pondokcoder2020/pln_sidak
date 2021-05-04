@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <include layout="@layout/header" />
+    <FrameLayout
+        android:elevation="2dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:ignore="MissingConstraints">
+        <LinearLayout
+            android:id="@+id/backHome"
+            android:layout_margin="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <LinearLayout
+                android:layout_weight=".1"
+                android:layout_width="0dp"
+                android:layout_height="40dp">
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <TextView
+                        android:id="@+id/back_page"
+                        android:layout_centerInParent="true"
+                        android:textStyle="bold"
+                        android:textSize="10pt"
+                        android:fontFamily="@font/fasolid900"
+                        android:textColor="#fff"
+                        android:text="&#xf104;"
+                        android:gravity="center"
+                        android:textAlignment="center"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                </RelativeLayout>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_weight=".8"
+                android:layout_width="0dp"
+                android:layout_height="match_parent">
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_centerInParent="true">
+                        <TextView
+                            android:layout_centerInParent="true"
+                            android:textStyle="bold"
+                            android:textSize="10pt"
+                            android:textColor="#fff"
+                            android:text="Laporan"
+                            android:gravity="center_vertical"
+                            android:textAlignment="viewStart"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            tools:ignore="RtlCompat" />
+                        <TextView
+                            android:layout_centerInParent="true"
+                            android:id="@+id/kategori_caption"
+                            android:textStyle="bold"
+                            android:textSize="10pt"
+                            android:textColor="#fff"
+                            android:text=" Kategori"
+                            android:gravity="center_vertical"
+                            android:textAlignment="viewStart"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            tools:ignore="RtlCompat" />
+                    </LinearLayout>
+                </RelativeLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </FrameLayout>
+    <LinearLayout
+        android:paddingTop="60dp"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="75dp"
+        tools:ignore="MissingConstraints">
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/Widget.MaterialComponents.CardView"
+            app:cardElevation="10dp"
+            app:cardCornerRadius="0dp"
+            android:layout_margin="10dp"
+            android:background="#fff"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <ScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <LinearLayout
+                        android:padding="20dp"
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:background="#fff"
+                            android:layout_marginBottom="20dp"
+                            android:layout_height="wrap_content"
+                            app:hintTextColor="#000"
+                            android:hint="Judul"
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/judul_laporan"
+                                android:layout_width="match_parent"
+                                android:layout_weight="1"
+                                android:layout_height="wrap_content"
+                                android:drawablePadding="10dp"
+                                android:importantForAutofill="no"
+                                android:textColor="#000"
+                                android:nextFocusForward="@id/isi_laporan"
+                                android:inputType="text" />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:background="#fff"
+                            android:layout_marginBottom="20dp"
+                            android:layout_height="wrap_content"
+                            app:hintTextColor="#000"
+                            android:hint="Keterangan"
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:layout_gravity="top"
+                                android:gravity="top"
+                                android:id="@+id/isi_laporan"
+                                android:layout_width="match_parent"
+                                android:layout_weight="1"
+                                android:layout_height="200dp"
+                                android:drawablePadding="10dp"
+                                android:importantForAutofill="no"
+                                android:nextFocusForward="@id/lokasi_laporan"
+                                android:textColor="#000"
+                                android:inputType="textMultiLine" />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+
+
+
+
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:background="#fff"
+                            android:layout_height="wrap_content"
+                            app:hintTextColor="#000"
+                            android:hint="Lokasi"
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/lokasi_laporan"
+                                android:layout_width="match_parent"
+                                android:layout_weight="1"
+                                android:layout_height="wrap_content"
+                                android:drawablePadding="10dp"
+                                android:importantForAutofill="no"
+                                android:textColor="#000"
+                                android:inputType="text" />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <com.google.android.material.button.MaterialButton
+                            android:layout_gravity="center"
+                            android:id="@+id/btn_camera"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/fasolid900"
+                            android:text="&#xf030;"
+                            android:elevation="10dp"
+                            android:layout_margin="10dp"
+                            android:textAlignment="center"
+                            android:textAllCaps="false"
+                            app:cornerRadius="5dp"
+                            android:padding="9dp"
+                            android:textColor="#fff"
+                            android:textSize="14sp" />
+
+                        <ImageView
+                            android:src="@drawable/ic_camera"
+                            android:id="@+id/capturedImage"
+                            android:layout_width="match_parent"
+                            android:layout_height="200dp" />
+
+
+
+                        <com.google.android.material.button.MaterialButton
+                            android:layout_gravity="center"
+                            android:id="@+id/btn_submit"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppins"
+                            android:text="Kirim"
+                            android:elevation="10dp"
+                            android:layout_margin="10dp"
+                            android:textAlignment="center"
+                            android:textAllCaps="false"
+                            app:cornerRadius="5dp"
+                            android:padding="9dp"
+                            android:textColor="#fff"
+                            android:textSize="14sp" />
+                    </LinearLayout>
+                </ScrollView>
+            </RelativeLayout>
+        </com.google.android.material.card.MaterialCardView>
+        <!--</ScrollView>-->
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
