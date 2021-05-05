@@ -640,6 +640,7 @@
                                                                 android:hint="Dihentikan Sejak">
                                                                 <com.google.android.material.textfield.TextInputEditText
                                                                     android:id="@+id/txt_sejak"
+                                                                    android:focusableInTouchMode="false"
                                                                     android:layout_width="match_parent"
                                                                     android:layout_weight="1"
                                                                     android:fontFamily="@font/poppins"
@@ -688,6 +689,7 @@
                                                                 android:hint="Dihentikan Sampai">
                                                                 <com.google.android.material.textfield.TextInputEditText
                                                                     android:id="@+id/txt_sampai"
+                                                                    android:focusableInTouchMode="false"
                                                                     android:layout_width="match_parent"
                                                                     android:layout_weight="1"
                                                                     android:layout_height="wrap_content"

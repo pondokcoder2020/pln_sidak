@@ -3,6 +3,7 @@ package app.pondokcoder.pln_sidak.ui.swa
 import android.annotation.SuppressLint
 import android.app.Activity
 import android.app.AlertDialog
+import android.app.DatePickerDialog
 import android.content.ContentValues
 import android.content.Context
 import android.content.DialogInterface
@@ -55,6 +56,8 @@ import retrofit2.http.*
 import java.io.File
 import java.io.FileInputStream
 import java.io.IOException
+import java.util.*
+import kotlin.collections.ArrayList
 
 
 class SWADetailFragment : Fragment(), MainActivity.IOnBackPressed {
@@ -83,7 +86,7 @@ class SWADetailFragment : Fragment(), MainActivity.IOnBackPressed {
     val kondisi_report: MutableList<LaporanItem> = ArrayList()
     val tindakan_report: MutableList<LaporanItem> = ArrayList()
     var target_report: MutableList<LaporanItem> = ArrayList()
-    var selected_kriteria: MutableList<String> = ArrayList()
+    var selected_kriteria: ArrayList<String> = ArrayList()
 
     private lateinit var call_me: LinearLayout
 
@@ -107,6 +110,101 @@ class SWADetailFragment : Fragment(), MainActivity.IOnBackPressed {
         list_tindakan_bahaya = root.findViewById(R.id.list_tindakan_bahaya)
         txt_sejak = root.findViewById(R.id.txt_sejak)
         txt_sampai = root.findViewById(R.id.txt_sampai)
+
+
+
+
+        txt_sejak.setOnClickListener {
+            var year = 0
+            var month = 0
+            var day = 0
+
+            if (txt_sejak.text.isNullOrEmpty()){
+                val c = Calendar.getInstance()
+                year = c.get(Calendar.YEAR)
+                month = c.get(Calendar.MONTH)
+                day = c.get(Calendar.DAY_OF_MONTH)
+            } else {
+                val tglLahir = txt_sejak.text.toString().split("-")
+
+                year = tglLahir[2].toInt()
+                month = tglLahir[1].toInt() - 1
+                day = tglLahir[0].toInt()
+            }
+
+            val dpd = DatePickerDialog(root.context, { view, year, monthOfYear, dayOfMonth ->
+
+                var dayString = dayOfMonth.toString()
+
+                val monthVal = monthOfYear + 1
+                var monthString = monthVal.toString()
+                //d("MONTH", "$monthOfYear")
+
+                if (dayString.length < 2){
+                    dayString = "0$dayString"
+                }
+
+                if (monthString.length < 2) {
+                    monthString = "0$monthString"
+                }
+
+                // Display Selected date in textbox
+                txt_sejak.setText("$dayString/$monthString/$year")
+
+            }, year, month, day)
+
+            dpd.show()
+        }
+
+
+
+
+
+        txt_sampai.setOnClickListener {
+            var year = 0
+            var month = 0
+            var day = 0
+
+            if (txt_sampai.text.isNullOrEmpty()){
+                val c = Calendar.getInstance()
+                year = c.get(Calendar.YEAR)
+                month = c.get(Calendar.MONTH)
+                day = c.get(Calendar.DAY_OF_MONTH)
+            } else {
+                val tglLahir = txt_sampai.text.toString().split("-")
+
+                year = tglLahir[2].toInt()
+                month = tglLahir[1].toInt() - 1
+                day = tglLahir[0].toInt()
+            }
+
+            val dpd = DatePickerDialog(root.context, { view, year, monthOfYear, dayOfMonth ->
+
+                var dayString = dayOfMonth.toString()
+
+                val monthVal = monthOfYear + 1
+                var monthString = monthVal.toString()
+                //d("MONTH", "$monthOfYear")
+
+                if (dayString.length < 2){
+                    dayString = "0$dayString"
+                }
+
+                if (monthString.length < 2) {
+                    monthString = "0$monthString"
+                }
+
+                // Display Selected date in textbox
+                txt_sampai.setText("$dayString/$monthString/$year")
+
+            }, year, month, day)
+
+            dpd.show()
+        }
+
+
+
+
 
 
         upload_kondisi.setOnClickListener {
@@ -168,9 +266,15 @@ class SWADetailFragment : Fragment(), MainActivity.IOnBackPressed {
                     //listFotoTindakan.add(imageName)
                 }
 
-                var keterangan : String = txt_keterangan_swa.text.toString()
+                val keterangan : String = txt_keterangan_swa.text.toString()
 
-                kirim(readID, keterangan, selected_kriteria, listFotoTindakan, listFotoKondisi ,txt_sejak.text.toString(),txt_sampai.text.toString())
+                val tglSejak = txt_sejak.text.toString()
+                val tglSejakFix = formatWaktu(tglSejak)
+
+                val tglSampai = txt_sampai.text.toString()
+                val tglSampaiFix = formatWaktu(tglSampai)
+
+                kirim(readID, keterangan, selected_kriteria, listFotoTindakan, listFotoKondisi ,tglSejakFix, tglSampaiFix)
             } else {
                 Toast.makeText(parentFragment, "Working Permit tidak ditemukan", Toast.LENGTH_LONG).show()
             }
@@ -192,6 +296,12 @@ class SWADetailFragment : Fragment(), MainActivity.IOnBackPressed {
         refreshSWA(readID)
         refreshKriteria(readID, "list", load_kriteria)
         return root
+    }
+
+    fun formatWaktu(dateString : String) : String {
+        val arrString = dateString.split("/")
+
+        return "${arrString[1]}/${arrString[0]}/${arrString[2]}"
     }
 
     fun getBase64FromImage(image: File) : String {
@@ -415,9 +525,10 @@ class SWADetailFragment : Fragment(), MainActivity.IOnBackPressed {
                             }
                         }
 
-                        val UID: String? = dataset?.getResponseData()?.get(0)?.getResponseUID()
-                        val subkategori_id: String? =
-                            dataset?.getResponseData()?.get(0)?.getResponseUID()
+                        var subkategori_id: String = ""
+                        if (dataset?.getResponseData()!!.size > 0) {
+                            subkategori_id = dataset?.getResponseData()?.get(0)?.getResponseUID().toString()
+                        }
                     }
                 }
             }
@@ -526,11 +637,11 @@ class SWADetailFragment : Fragment(), MainActivity.IOnBackPressed {
             itemView.switch_swa.setOnCheckedChangeListener() { buttonView, isChecked ->
                 val item = kriteriaItem?.get(position)
                 if(isChecked) {
-                    if(selected_kriteria.indexOf(item?.getResponseNama().toString()) < 0) {
-                        selected_kriteria.add(item?.getResponseNama().toString())
+                    if(selected_kriteria.indexOf(item?.getResponseUID().toString()) < 0) {
+                        selected_kriteria.add(item?.getResponseUID().toString())
                     }
                 } else {
-                    selected_kriteria.removeAt(selected_kriteria.indexOf(item?.getResponseNama().toString()))
+                    selected_kriteria.removeAt(selected_kriteria.indexOf(item?.getResponseUID().toString()))
                 }
             }
 
@@ -768,13 +879,13 @@ class SWADetailFragment : Fragment(), MainActivity.IOnBackPressed {
 
 
 
-    private fun kirim(uid: String, keterangan: String, kriteria: List<String>,
+    private fun kirim(uid: String, keterangan: String, kriteria: ArrayList<String>,
                       //foto_tindakan:Map<String, RequestBody>, foto_kondisi:Map<String, RequestBody>,
                       foto_tindakan: ArrayList<String>, foto_kondisi: ArrayList<String>,
                       sejak:String, sampai:String){
-        //Toast.makeText(parentFragment, "Nah", Toast.LENGTH_LONG).show()
         parentFragment.runOnUiThread {
             btn_submit_swa.isEnabled = false
+            btn_submit_swa.text = "Memproses..."
         }
         val retPost = RetroInstance.getRetrofitInstance(configuration.server, sessionManager.jWT).create(
             SubmitInterface::class.java
@@ -787,6 +898,7 @@ class SWADetailFragment : Fragment(), MainActivity.IOnBackPressed {
                 Log.e("TANAKA", t.message.toString())
                 parentFragment.runOnUiThread {
                     btn_submit_swa.isEnabled = true
+                    btn_submit_swa.text = "Submit"
                 }
             }
 
@@ -807,6 +919,7 @@ class SWADetailFragment : Fragment(), MainActivity.IOnBackPressed {
                     }
 
                     btn_submit_swa.isEnabled = true
+                    btn_submit_swa.text = "Submit"
                 }
             }
 
@@ -814,45 +927,7 @@ class SWADetailFragment : Fragment(), MainActivity.IOnBackPressed {
     }
 
 
-    private fun kirim2(uid: String, keterangan: String, kriteria: List<String>,
-        //foto_tindakan:Map<String, RequestBody>, foto_kondisi:Map<String, RequestBody>,
-                      foto_tindakan: List<MultipartBody.Part>, foto_kondisi: List<MultipartBody.Part>,
-                      sejak:String, sampai:String){
-        //Toast.makeText(parentFragment, "Nah", Toast.LENGTH_LONG).show()
-        parentFragment.runOnUiThread {
-            btn_submit_swa.isEnabled = false
-        }
-        val retPost = RetroInstance.getRetrofitInstance(configuration.server, sessionManager.jWT).create(
-            SubmitInterface::class.java
-        )
 
-        retPost.kirim2("simpan_swa", uid, keterangan, kriteria, foto_tindakan, foto_kondisi,
-            sejak, sampai).enqueue(object :
-            Callback<Hasil> {
-            override fun onFailure(call: Call<Hasil>, t: Throwable) {
-                Toast.makeText(parentFragment, "Error : " + t.toString(), Toast.LENGTH_LONG).show()
-                Log.e("TANAKA", t.message.toString())
-                parentFragment.runOnUiThread {
-                    btn_submit_swa.isEnabled = true
-                }
-            }
-
-            override fun onResponse(call: Call<Hasil>, response: Response<Hasil>) {
-                Toast.makeText(parentFragment, response.body()?.getResponse().toString(), Toast.LENGTH_LONG).show()
-                parentFragment.runOnUiThread {
-                    //Log.e("TANAKA", response.body()?.getResponse().toString())
-                    if (response.body()?.getResponse().toString().equals("0")) {
-
-                    } else {
-                        val targetFragment: Fragment = SWAFragment()
-                    }
-
-                    btn_submit_swa.isEnabled = true
-                }
-            }
-
-        })
-    }
 
 
     class Hasil {
@@ -889,7 +964,7 @@ class SWADetailFragment : Fragment(), MainActivity.IOnBackPressed {
             @Field("request") request: String,
             @Field("uid") uid: String,
             @Field("keterangan") keterangan: String,
-            @Field("kriteria") kriteria: List<String>,
+            @Field("kriteria[]") kriteria: ArrayList<String>,
             //@PartMap foto_tindakan: Map<String, RequestBody>,
             //@PartMap foto_kondisi: Map<String, RequestBody>,
             @Field("foto_tindakan[]") foto_tindakan: ArrayList<String>,
@@ -897,23 +972,6 @@ class SWADetailFragment : Fragment(), MainActivity.IOnBackPressed {
             @Field("sejak") sejak: String,
             @Field("sampai") sampai: String
         ): Call<Hasil>
-
-
-        @Headers("Accept: application/json")
-        @POST("SWA")
-        @Multipart
-        fun kirim2(
-            @Part("request") request: String,
-            @Part("uid") uid: String,
-            @Part("keterangan") keterangan: String,
-            @Part("kriteria") kriteria: List<String>,
-            //@PartMap foto_tindakan: Map<String, RequestBody>,
-            //@PartMap foto_kondisi: Map<String, RequestBody>,
-            @Part("foto_tindakan") foto_tindakan: List<MultipartBody.Part>,
-            @Part("foto_kondisi") foto_kondisi: List<MultipartBody.Part>,
-            @Part("sejak") sejak: String,
-            @Part("sampai") sampai: String
-        ) : Call<Hasil>
 
     }
 
